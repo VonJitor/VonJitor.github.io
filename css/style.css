@@ -1,0 +1,80 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Ajustes da Navbar */
+.navbar-brand {
+    font-weight: bold;
+}
+.nav-link {
+    font-weight: 500;
+}
+
+/* Seção de Introdução */
+#introducao {
+    padding: 60px 0;
+}
+#introducao h1 {
+    font-size: 2.8rem;
+    color: #343a40;
+}
+#introducao .lead {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Cards de Habilidades */
+#habilidades .card {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 8px;
+}
+#habilidades .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+}
+#habilidades .card i {
+    color: #007bff; /* Cor primária do Bootstrap */
+}
+
+/* Seções de Currículo */
+#experiencia .card,
+#formacao .card {
+    border: none;
+    border-left: 5px solid #007bff; /* Linha de destaque */
+    border-radius: 0 8px 8px 0;
+}
+#experiencia ul,
+#formacao ul {
+    list-style: disc; /* ou circle, square */
+    padding-left: 20px;
+}
+#experiencia li,
+#formacao li {
+    margin-bottom: 5px;
+}
+
+
+/* Portfólio (lazy-load) */
+.lazyload {
+    background-color: #f0f0f0; /* Fundo enquanto a imagem carrega */
+    min-height: 200px; /* Altura mínima para evitar layout shift */
+    display: block; /* Garante que o min-height funcione */
+}
+.lazyload:not([src]) {
+    visibility: hidden; /* Oculta a imagem até ter um src */
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    #introducao h1 {
+        font-size: 2rem;
+    }
+    #introducao .lead {
+        font-size: 1rem;
+    }
+}
